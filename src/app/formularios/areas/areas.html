@@ -1,0 +1,33 @@
+<h2>Calculadora de Áreas</h2>
+
+
+<div style="margin-bottom: 20px;">
+  <h3>Triángulo</h3>
+  <input type="number" #baseTriangulo placeholder="Base">
+  <input type="number" #alturaTriangulo placeholder="Altura">
+  <button (click)="calcularTriangulo(baseTriangulo.value, alturaTriangulo.value)">Calcular</button>
+  <p *ngIf="areaTriangulo !== null">Área: <strong>{{ areaTriangulo }}</strong></p>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <h3>Rectángulo</h3>
+  <input type="number" #baseRect placeholder="Base">
+  <input type="number" #alturaRect placeholder="Altura">
+  <button (click)="calcularRectangulo(baseRect.value, alturaRect.value)">Calcular</button>
+  <p *ngIf="areaRectangulo !== null">Área: <strong>{{ areaRectangulo }}</strong></p>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <h3>Círculo</h3>
+  <input type="number" #radioCirculo placeholder="Radio">
+  <button (click)="calcularCirculo(radioCirculo.value)">Calcular</button>
+  <p *ngIf="areaCirculo !== null">Área: <strong>{{ areaCirculo | number:'1.0-2' }}</strong></p>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <h3>Pentágono Regular</h3>
+  <input type="number" #ladoPentagono placeholder="Medida de un lado">
+  <input type="number" #apotemaPentagono placeholder="Apotema">
+  <button (click)="calcularPentagono(ladoPentagono.value, apotemaPentagono.value)">Calcular</button>
+  <p *ngIf="areaPentagono !== null">Área: <strong>{{ areaPentagono }}</strong></p>
+</div>
