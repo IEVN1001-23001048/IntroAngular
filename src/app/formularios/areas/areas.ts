@@ -13,8 +13,8 @@ export class AreasComponent {
   areaCirculo: number =0;
   areaPentagono: number =0;
   r:number =0;
-  apotema:number=0;
-  base:number=0;
+ 
+
  
   calcularTriangulo(base: string, altura: string) {
     this.areaTriangulo = (+base * +altura) / 2;
@@ -29,6 +29,6 @@ export class AreasComponent {
   }
 
   calcularPentagono(base: string, apotema: string) {
-  this.areaPentagono = ((this.base+5)* this.apotema) / 2;
+  this.areaPentagono = ((+base+5)* +apotema) / 2;
   }
 }

@@ -1,0 +1,53 @@
+<div style="background-color: #3b5998; color: white; padding: 20px; font-family: Arial, sans-serif; max-width: 800px; margin: auto;">
+  
+  <div style="text-align: center; margin-bottom: 20px;">
+    <h1 style="background-color: #f1f1f1; color: black; display: inline-block; padding: 5px 20px; border-radius: 5px;">Cinepolis</h1>
+  </div>
+
+  <div style="display: flex; justify-content: space-between;">
+    
+    <fieldset style="border: 1px solid white; padding: 15px; width: 45%;">
+      <legend style="padding: 0 5px;">Entradas</legend>
+      
+      <div style="margin-bottom: 10px;">
+        <label style="display: inline-block; width: 150px;">Nombre:</label>
+        <input type="text" [(ngModel)]="nombre">
+      </div>
+      
+      <div style="margin-bottom: 10px;">
+        <label style="display: inline-block; width: 150px;">Cantidad Compradores:</label>
+        <input type="number" [(ngModel)]="compradores">
+      </div>
+      
+      <div style="margin-bottom: 10px;">
+        <label style="display: inline-block; width: 150px;">Tarjeta Cineco:</label>
+        <input type="radio" name="tarjeta" [value]="true" [(ngModel)]="cineco"> Sí
+        <input type="radio" name="tarjeta" [value]="false" [(ngModel)]="cineco" style="margin-left: 10px;"> No
+      </div>
+      
+      <div>
+        <label style="display: inline-block; width: 150px;">Cantidad De Boletas:</label>
+        <input type="number" [(ngModel)]="cantBoletas">
+      </div>
+    </fieldset>
+
+    <fieldset style="border: 1px solid white; padding: 15px; width: 45%;">
+      <legend style="padding: 0 5px;">Salidas</legend>
+      
+      <div>
+        <label style="display: inline-block; width: 120px;">Valor a Pagar:</label>
+        <input type="text" [value]="total | currency:'USD':'symbol':'1.0-0'" readonly style="background-color: #e9ecef;">
+      </div>
+    </fieldset>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <fieldset style="border: 1px solid white; display: inline-block; padding: 15px;">
+      <legend style="padding: 0 5px;">Acciones</legend>
+      <button (click)="compra()" style="padding: 5px 20px; margin-right: 10px; cursor: pointer;">Comprar</button>
+      <button (click)="salir()" style="padding: 5px 20px; cursor: pointer;">Salir</button>
+    </fieldset>
+  </div>
+
+</div>

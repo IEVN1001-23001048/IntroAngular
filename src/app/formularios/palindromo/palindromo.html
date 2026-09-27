@@ -1,0 +1,12 @@
+<div>
+  <h2>Analizador de Frases</h2>
+  
+  <input type="text" [(ngModel)]="phrase" placeholder="Escribe aquí...">
+  <button (click)="analyze()">Analizar</button>
+
+  <div *ngIf="showResults">
+    <p><strong>Vocales ({{ vowelsCount }}):</strong> [ {{ foundVowels }} ]</p>
+    <p><strong>Consonantes ({{ consonantsCount }}):</strong> [ {{ foundConsonants }} ]</p>
+    <p><strong>Palíndromo:</strong> {{ isPalindrome ? 'Sí' : 'No' }}</p>
+  </div>
+</div>
